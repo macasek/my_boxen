@@ -55,7 +55,7 @@ node default {
   # core modules, needed for most things
   include dnsmasq
   include git
-  include hub
+  # include hub   # removed in favor of gh
   include nginx
 
   # fail if FDE is not enabled
@@ -63,17 +63,48 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # node versions
-  include nodejs::v0_4
-  include nodejs::v0_6
-  include nodejs::v0_8
-  include nodejs::v0_10
-
   # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_2
   include ruby::1_9_3
   include ruby::2_0_0
+
+  # custom includes
+  include go
+  include homebrew
+  include mysql
+  include chrome
+  include redis
+  include gh
+  include dropbox
+  include gcc
+  include phantomjs
+  include foreman
+  include alfred
+  include firefox
+  include licecap
+  include onyx
+  # include adium
+  include ccleaner
+  include ibackup
+  include textual
+  include moreutils
+  include sourcetree
+  include hipchat
+  include iterm2::stable
+  include mou
+  include mou::themes
+  include sublime_text_2    # TODO https://github.com/boxen/puppet-sublime_text_2
+  include gimp
+  include osxfuse
+  include charles
+  include handbrake
+  include screenhero
+  include screen
+  include imagemagick
+  include pow
+  include tunnelblick
+  include openssl
+  include freetds
+  include induction
 
   # common, useful packages
   package {
@@ -87,5 +118,32 @@ node default {
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
+  }
+
+  class { 'ruby::global':
+    version => '2.0.0'
+  }
+
+  go::version { '1.1.2': }
+  phantomjs::version { '1.9.2': }
+
+  ruby::gem { "bundler for 2.0.0":
+    gem     => 'bundler',
+    ruby    => '2.0.0'
+  }
+
+  ruby::gem { "bundler for 1.9.3":
+    gem     => 'bundler',
+    ruby    => '1.9.3'
+  }
+
+  ruby::plugin { 'rbenv-vars':
+    ensure => 'v1.2.0',
+    source  => 'sstephenson/rbenv-vars'
+  }
+
+  ruby::plugin { 'rbenv-gemset':
+    ensure => 'v0.4.1',
+    source  => 'jf/rbenv-gemset'
   }
 }
