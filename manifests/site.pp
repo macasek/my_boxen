@@ -84,7 +84,6 @@ node default {
   include onyx
   # include adium
   include ccleaner
-  include ibackup
   include textual
   include moreutils
   include sourcetree

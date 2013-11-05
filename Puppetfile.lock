@@ -1,7 +1,27 @@
 GITHUBTARBALL
+  remote: boxen/puppet-alfred
+  specs:
+    alfred (1.1.6)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.3.4)
+
+GITHUBTARBALL
+  remote: boxen/puppet-ccleaner
+  specs:
+    ccleaner (1.1.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-charles
+  specs:
+    charles (1.0.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.1.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
@@ -9,14 +29,39 @@ GITHUBTARBALL
     dnsmasq (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-dropbox
+  specs:
+    dropbox (1.1.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-firefox
+  specs:
+    firefox (1.1.4)
+
+GITHUBTARBALL
   remote: boxen/puppet-foreman
   specs:
     foreman (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-freetds
+  specs:
+    freetds (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
     gcc (2.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-gh
+  specs:
+    gh (1.3.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-gimp
+  specs:
+    gimp (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-git
@@ -29,14 +74,54 @@ GITHUBTARBALL
     go (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-handbrake
+  specs:
+    handbrake (1.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-hipchat
+  specs:
+    hipchat (1.0.8)
+
+GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.5.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-hub
+  remote: boxen/puppet-imagemagick
   specs:
-    hub (1.0.3)
+    imagemagick (1.2.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-induction
+  specs:
+    induction (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-iterm2
+  specs:
+    iterm2 (1.0.3)
+
+GITHUBTARBALL
+  remote: boxen/puppet-licecap
+  specs:
+    licecap (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-moreutils
+  specs:
+    moreutils (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mou
+  specs:
+    mou (1.1.3)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mysql
+  specs:
+    mysql (1.1.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -49,9 +134,24 @@ GITHUBTARBALL
     nodejs (3.3.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-onyx
+  specs:
+    onyx (1.1.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-openssl
   specs:
     openssl (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-osx
+  specs:
+    osx (2.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-osxfuse
+  specs:
+    osxfuse (1.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-phantomjs
@@ -64,6 +164,16 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-pow
+  specs:
+    pow (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-redis
+  specs:
+    redis (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-repository
   specs:
     repository (2.2.0)
@@ -74,9 +184,39 @@ GITHUBTARBALL
     ruby (6.7.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-screen
+  specs:
+    screen (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-screenhero
+  specs:
+    screenhero (1.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-sourcetree
+  specs:
+    sourcetree (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-sublime_text_2
+  specs:
+    sublime_text_2 (1.1.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-textual
+  specs:
+    textual (3.2.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-tunnelblick
+  specs:
+    tunnelblick (1.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
@@ -94,23 +234,53 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 DEPENDENCIES
+  alfred (>= 0)
   boxen (= 3.3.4)
+  ccleaner (>= 0)
+  charles (>= 0)
+  chrome (>= 0)
   dnsmasq (= 1.0.0)
+  dropbox (>= 0)
+  firefox (>= 0)
   foreman (= 1.0.0)
+  foreman (>= 0)
+  freetds (>= 0)
   gcc (= 2.0.1)
+  gh (>= 0)
+  gimp (>= 0)
   git (= 1.2.5)
   go (= 1.0.0)
+  handbrake (>= 0)
+  hipchat (>= 0)
   homebrew (= 1.5.1)
-  hub (= 1.0.3)
+  imagemagick (>= 0)
+  induction (>= 0)
   inifile (= 1.0.0)
+  iterm2 (>= 0)
+  licecap (>= 0)
+  moreutils (>= 0)
+  mou (>= 0)
+  mysql (>= 0)
   nginx (= 1.4.2)
   nodejs (= 3.3.0)
+  onyx (>= 0)
+  openssl (>= 0)
   openssl (= 1.0.0)
+  osx (>= 0)
+  osxfuse (>= 0)
   phantomjs (= 2.0.2)
   pkgconfig (= 1.0.0)
+  pow (>= 0)
+  redis (>= 0)
   repository (= 2.2.0)
   ruby (= 6.7.2)
+  screen (>= 0)
+  screenhero (>= 0)
+  sourcetree (>= 0)
   stdlib (= 4.1.0)
+  sublime_text_2 (>= 0)
   sudo (= 1.0.0)
+  textual (>= 0)
+  tunnelblick (>= 0)
   xquartz (= 1.1.0)
 
