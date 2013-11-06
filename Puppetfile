@@ -40,7 +40,6 @@ github "gcc",        "2.0.1"
 github "git",        "1.2.5"
 github "go",         "1.0.0"
 github "homebrew",   "1.5.1"
-# github "hub",        "1.0.3"   # removed in favor of gh
 github "inifile",    "1.0.0", :repo => "puppetlabs/puppetlabs-inifile"
 github "nginx",      "1.4.2"
 github "nodejs",     "3.3.0"
@@ -59,25 +58,18 @@ github "xquartz",    "1.1.0"
 ## Apps
 
 # github "adium" # fails???
-github "alfred"         # productivity app
-github "ccleaner"       # os cleanup util
 github "charles"        # web debugging proxy
 github "chrome"
 github "dropbox"
 github "firefox"
 github "gimp"
 github "handbrake"
-github "hipchat"        # group chat
-github "induction"      # db gui
 github "iterm2"
 github "onyx"           # osx optimization tool
 github "mou"            # markdown editor
 github "mysql"
 github "redis"
-github "screenhero"     # screen sharing
-github "sourcetree"     # repo viewer
 github "sublime_text_2"
-github "textual"        # irc client
 github "tunnelblick"    # ui for openvpn
 
 ## Utils
