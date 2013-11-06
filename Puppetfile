@@ -70,6 +70,8 @@ github "mou"            # markdown editor
 github "mysql"
 github "redis"
 github "sublime_text_2"
+github "slate"
+github "textmate"
 
 ## Utils
 

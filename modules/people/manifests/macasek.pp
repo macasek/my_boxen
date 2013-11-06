@@ -35,6 +35,8 @@ class people::macasek {
   # include adium
   include handbrake
   include sublime_text_2
+  include slate
+  include textmate::textmate2::nightly
 
   # Utils
   include osxfuse

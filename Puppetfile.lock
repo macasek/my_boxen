@@ -169,6 +169,11 @@ GITHUBTARBALL
     screen (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-slate
+  specs:
+    slate (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-sublime_text_2
   specs:
     sublime_text_2 (1.1.2)
@@ -177,6 +182,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-textmate
+  specs:
+    textmate (1.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
@@ -231,8 +241,10 @@ DEPENDENCIES
   repository (= 2.2.0)
   ruby (= 6.7.2)
   screen (>= 0)
+  slate (>= 0)
   stdlib (= 4.1.0)
   sublime_text_2 (>= 0)
   sudo (= 1.0.0)
+  textmate (>= 0)
   xquartz (= 1.1.0)
 
