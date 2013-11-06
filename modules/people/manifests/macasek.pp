@@ -2,6 +2,7 @@ class people::macasek {
   $home     = "/Users/${::boxen_user}"
 
   # TODO: should do a pull if exists...
+  # TODO: should set up links to dotfiles...
   repository { "${boxen::config::srcdir}/dotfiles":
     source  => "${home}/Dropbox/src/dotfiles",
     require => File[$::boxen::config::srcdir]
