@@ -58,15 +58,15 @@ github "xquartz",    "1.1.0"
 ## Apps
 
 github "adium"
-github "charles"        # web debugging proxy
+github "charles",     "1.0.3", :repo => "niclasnilsson/puppet-charles"
 github "chrome"
 github "dropbox"
 github "firefox"
 github "gimp"
 github "handbrake"
 github "iterm2"
-github "onyx"           # osx optimization tool
-github "mou"            # markdown editor
+github "onyx"
+github "mou"
 github "mysql"
 github "redis"
 github "sublime_text_2"

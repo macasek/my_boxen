@@ -9,11 +9,6 @@ GITHUBTARBALL
     boxen (3.3.4)
 
 GITHUBTARBALL
-  remote: boxen/puppet-charles
-  specs:
-    charles (1.0.2)
-
-GITHUBTARBALL
   remote: boxen/puppet-chrome
   specs:
     chrome (1.1.2)
@@ -199,6 +194,11 @@ GITHUBTARBALL
     xquartz (1.1.0)
 
 GITHUBTARBALL
+  remote: niclasnilsson/puppet-charles
+  specs:
+    charles (1.0.3)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.0.0)
@@ -211,7 +211,7 @@ GITHUBTARBALL
 DEPENDENCIES
   adium (>= 0)
   boxen (= 3.3.4)
-  charles (>= 0)
+  charles (= 1.0.3)
   chrome (>= 0)
   dnsmasq (= 1.0.0)
   dropbox (>= 0)
