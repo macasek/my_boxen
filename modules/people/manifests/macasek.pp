@@ -53,4 +53,12 @@ class people::macasek {
   class { 'osx::dock::icon_size':
     size => 48
   }
+
+  git::config::global { 'user.email':
+    value  => 'macasek@gmail.com'
+  }
+
+  git::config::global { 'user.name':
+    value  => 'Michael Macasek'
+  }
 }
