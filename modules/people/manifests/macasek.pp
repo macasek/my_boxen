@@ -1,6 +1,7 @@
 class people::macasek {
   $home     = "/Users/${::boxen_user}"
 
+  # TODO: should do a pull if exists...
   repository { "${boxen::config::srcdir}/dotfiles":
     source  => "${home}/Dropbox/src/dotfiles",
     require => File[$::boxen::config::srcdir]
@@ -45,7 +46,18 @@ class people::macasek {
     require => Package['SublimeText2'],
   }
 
-  # TODO add sublime config...
+  file { '/Users/michael/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap':
+    source  => "${boxen::config::repodir}/templates/sublime/Default (OSX).sublime-keymap",
+    mode    => '0644',
+    require => Package['SublimeText2'],
+  }
+
+  file { '/Users/michael/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings':
+    source  => "${boxen::config::repodir}/templates/sublime/Preferences.sublime-settings",
+    mode    => '0644',
+    require => Package['SublimeText2'],
+  }
+
   # TODO add sublime packages...
   # sublime_text_2::package { 'Emmet':
   #   source => 'sergeche/emmet-sublime'
