@@ -145,4 +145,9 @@ node default {
     ensure => 'v0.4.1',
     source  => 'jf/rbenv-gemset'
   }
+
+  ruby::plugin { 'rbenv-use':
+    ensure => 'v0.0.0',
+    source  => 'rkh/rbenv-use'
+  }
 }
