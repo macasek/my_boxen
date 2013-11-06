@@ -91,7 +91,7 @@ github "moreutils"
 github "pow"
 github "openssl"
 github "osxfuse"
-github "osx"            # TODO: https://github.com/boxen/puppet-osx
+github "osx"
 github "screen"
 
 

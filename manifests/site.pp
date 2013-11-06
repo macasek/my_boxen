@@ -55,7 +55,6 @@ node default {
   # core modules, needed for most things
   include dnsmasq
   include git
-  # include hub   # removed in favor of gh
   include nginx
 
   # fail if FDE is not enabled
@@ -67,43 +66,34 @@ node default {
   include ruby::1_9_3
   include ruby::2_0_0
 
-  # custom includes
   include go
-  include homebrew
-  include mysql
+
+  # Apps
+  include charles
   include chrome
-  include redis
-  include gh
   include dropbox
-  include gcc
-  include phantomjs
-  include foreman
-  include alfred
   include firefox
-  include licecap
-  include onyx
-  # include adium
-  include ccleaner
-  include textual
-  include moreutils
-  include sourcetree
-  include hipchat
+  include gimp
   include iterm2::stable
+  include onyx
   include mou
   include mou::themes
-  include sublime_text_2    # TODO https://github.com/boxen/puppet-sublime_text_2
-  include gimp
-  include osxfuse
-  include charles
-  include handbrake
-  include screenhero
-  include screen
-  include imagemagick
-  include pow
-  include tunnelblick
-  include openssl
+  include mysql
+  include redis
+
+  # Utils
+  include foreman
   include freetds
-  include induction
+  include gcc
+  include gh
+  include homebrew
+  include imagemagick
+  include licecap
+  include moreutils
+  include phantomjs
+  include pow
+  include openssl
+  include screen
 
   # common, useful packages
   package {
