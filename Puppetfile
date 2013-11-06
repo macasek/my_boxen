@@ -57,7 +57,7 @@ github "xquartz",    "1.1.0"
 
 ## Apps
 
-# github "adium" # fails???
+github "adium"
 github "charles"        # web debugging proxy
 github "chrome"
 github "dropbox"

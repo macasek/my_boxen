@@ -32,7 +32,7 @@ class people::macasek {
   }
 
   # Apps
-  # include adium
+  include adium
   include handbrake
   include sublime_text_2
   include slate

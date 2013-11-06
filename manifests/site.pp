@@ -69,7 +69,7 @@ node default {
   include go
 
   # Apps
-  include charles
+  include charles   # TODO: issues installing....
   include chrome
   include dropbox
   include firefox
