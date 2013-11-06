@@ -4,9 +4,9 @@ class people::macasek {
   $dotfiles = "${src}/dotfiles"
 
   repository { $dotfiles:
-      source  => "${home}/Dropbox/src/dotfiles",
-      require => File[$src]
-    }
+    source  => "${home}/Dropbox/src/dotfiles",
+    require => File[$src]
+  }
 
   # Apps
   # include adium
@@ -23,6 +23,13 @@ class people::macasek {
 
   # Utils
   include osxfuse
+
+  file { "${src}/dropbox":
+    ensure  => link,
+    target  => "${home}/Dropbox/src",
+    mode    => '0755',
+    require => Package['Dropbox'],
+  }
 
   file { "${boxen::config::bindir}/lime":
     ensure  => link,
