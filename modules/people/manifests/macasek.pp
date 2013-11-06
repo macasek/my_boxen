@@ -19,7 +19,7 @@ class people::macasek {
     'dayman': {
       file { "${boxen::config::srcdir}/dropbox":
         ensure  => link,
-        target  => "/Volumes/Macintosh\ HD\ 2/Dropbox/src",
+        target  => "/Volumes/Macintosh HD 2/Dropbox/src",
         mode    => '0755',
         require => Package['Dropbox'],
       }

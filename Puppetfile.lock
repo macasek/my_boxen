@@ -179,11 +179,6 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-tunnelblick
-  specs:
-    tunnelblick (1.0.2)
-
-GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.0)
@@ -239,6 +234,5 @@ DEPENDENCIES
   stdlib (= 4.1.0)
   sublime_text_2 (>= 0)
   sudo (= 1.0.0)
-  tunnelblick (>= 0)
   xquartz (= 1.1.0)
 

@@ -70,7 +70,6 @@ github "mou"            # markdown editor
 github "mysql"
 github "redis"
 github "sublime_text_2"
-github "tunnelblick"    # ui for openvpn
 
 ## Utils
 
