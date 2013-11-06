@@ -121,8 +121,18 @@ node default {
     ruby    => '2.0.0'
   }
 
+  ruby::gem { "dotenv for 2.0.0":
+    gem     => 'dotenv',
+    ruby    => '2.0.0'
+  }
+
   ruby::gem { "bundler for 1.9.3":
     gem     => 'bundler',
+    ruby    => '1.9.3'
+  }
+
+  ruby::gem { "dotenv for 1.9.3":
+    gem     => 'dotenv',
     ruby    => '1.9.3'
   }
 
