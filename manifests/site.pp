@@ -147,7 +147,7 @@ node default {
   }
 
   ruby::plugin { 'rbenv-use':
-    ensure => 'v0.0.0',
+    ensure => 'master',
     source  => 'rkh/rbenv-use'
   }
 }
