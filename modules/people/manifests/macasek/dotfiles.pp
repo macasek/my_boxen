@@ -29,17 +29,10 @@ class people::macasek::dotfiles {
   file { "/Users/${::boxen_user}/.bundle":
     ensure  => link,
     mode    => '0644',
+    force   => true,
     target  => "${boxen::config::srcdir}/dotfiles/.bundle",
     require => Repository["${boxen::config::srcdir}/dotfiles"],
   }
-
-  # TODO: This conflicts with boxen..... :(
-  # file { "/Users/${::boxen_user}/.gemrc":
-  #   ensure  => link,
-  #   mode    => '0644',
-  #   target  => "${boxen::config::srcdir}/dotfiles/.gemrc",
-  #   require => Repository["${boxen::config::srcdir}/dotfiles"],
-  # }
 
   file { "/Users/${::boxen_user}/.git-completion.sh":
     ensure  => link,
@@ -55,24 +48,10 @@ class people::macasek::dotfiles {
     require => Repository["${boxen::config::srcdir}/dotfiles"],
   }
 
-  file { "/Users/${::boxen_user}/.gitignore":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${boxen::config::srcdir}/dotfiles/.gitignore",
-    require => Repository["${boxen::config::srcdir}/dotfiles"],
-  }
-
   file { "/Users/${::boxen_user}/.irbrc":
     ensure  => link,
     mode    => '0644',
     target  => "${boxen::config::srcdir}/dotfiles/.irbrc",
-    require => Repository["${boxen::config::srcdir}/dotfiles"],
-  }
-
-  file { "/Users/${::boxen_user}/.rvmrc":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${boxen::config::srcdir}/dotfiles/.rvmrc",
     require => Repository["${boxen::config::srcdir}/dotfiles"],
   }
 
