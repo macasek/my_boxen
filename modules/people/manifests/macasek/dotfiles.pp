@@ -1,7 +1,6 @@
 class people::macasek::dotfiles {
   $home = "/Users/${::boxen_user}"
 
-  # TODO: should set up links to dotfiles...
   repository { "${boxen::config::srcdir}/dotfiles":
     source  => "${home}/Dropbox/src/dotfiles"
   }
@@ -34,19 +33,13 @@ class people::macasek::dotfiles {
     require => Repository["${boxen::config::srcdir}/dotfiles"],
   }
 
+  # TODO: This conflicts with boxen..... :(
   # file { "/Users/${::boxen_user}/.gemrc":
   #   ensure  => link,
   #   mode    => '0644',
   #   target  => "${boxen::config::srcdir}/dotfiles/.gemrc",
   #   require => Repository["${boxen::config::srcdir}/dotfiles"],
   # }
-
-  file { "/Users/${::boxen_user}/.git":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${boxen::config::srcdir}/dotfiles/.git",
-    require => Repository["${boxen::config::srcdir}/dotfiles"],
-  }
 
   file { "/Users/${::boxen_user}/.git-completion.sh":
     ensure  => link,
