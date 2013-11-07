@@ -5,15 +5,15 @@ class config::sublime {
     $pkgname = $pkgarray[1]
 
     exec { "git clone https://github.com/${name}.git":
-      cwd      => "/Users/${::luser}${packagedir}",
+      cwd      => "/Users/${::boxen_user}${packagedir}",
       provider => 'shell',
-      creates  => "/Users/${::luser}${packagedir}${pkgname}",
+      creates  => "/Users/${::boxen_user}${packagedir}${pkgname}",
       path     => "${::boxen::config::homebrewdir}/bin",
       require  => [Package['SublimeText2'], Package['boxen/brews/git']],
     }
   }
 
-  $base = "/Users/${::luser}/Library/Application Support"
+  $base = "/Users/${::boxen_user}/Library/Application Support"
   $installedPackagesDir = "${base}/Sublime Text 2/Installed Packages"
   $structure = [ "${base}/Sublime Text 2",
                  "${base}/Sublime Text 2/Settings",
@@ -24,7 +24,7 @@ class config::sublime {
 
   file { $structure:
     ensure  => 'directory',
-    owner   => "${::luser}",
+    owner   => "${::boxen_user}",
     mode    => '0755',
   }->
 

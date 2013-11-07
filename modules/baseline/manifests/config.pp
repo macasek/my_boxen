@@ -6,13 +6,13 @@ class baseline::config {
   include config::sublime
 
   file { "iTerm2 Preferences":
-    path    => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
+    path    => "/Users/${::boxen_user}/Library/Preferences/com.googlecode.iterm2.plist",
     source  => "puppet:///modules/baseline/com.googlecode.iterm2.plist",
     require => Package['iTerm'],
   }
 
   file { "Terminal Preferences":
-    path   => "/Users/${::luser}/Library/Preferences/com.apple.Terminal.plist",
+    path   => "/Users/${::boxen_user}/Library/Preferences/com.apple.Terminal.plist",
     source => "puppet:///modules/baseline/com.apple.Terminal.plist",
   }
 
@@ -31,7 +31,7 @@ class baseline::config {
 
   property_list_key { 'Show GitX where git lives':
     ensure => present,
-    path   => "/Users/${::luser}/Library/Preferences/nl.frim.GitX.plist",
+    path   => "/Users/${::boxen_user}/Library/Preferences/nl.frim.GitX.plist",
     key    => 'gitExecutable',
     value  => '/opt/boxen/homebrew/bin/git',
   }
