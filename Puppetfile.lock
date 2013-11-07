@@ -59,6 +59,11 @@ GITHUBTARBALL
     git (1.2.5)
 
 GITHUBTARBALL
+  remote: boxen/puppet-gitx
+  specs:
+    gitx (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-go
   specs:
     go (1.0.0)
@@ -184,14 +189,29 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sysctl
+  specs:
+    sysctl (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-textmate
   specs:
     textmate (1.1.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-wget
+  specs:
+    wget (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.0)
+
+GITHUBTARBALL
+  remote: glarizza/puppet-property_list_key
+  specs:
+    property_list_key (0.1.0)
 
 GITHUBTARBALL
   remote: niclasnilsson/puppet-charles
@@ -223,6 +243,7 @@ DEPENDENCIES
   gh (>= 0)
   gimp (>= 0)
   git (= 1.2.5)
+  gitx (>= 0)
   go (= 1.0.0)
   handbrake (>= 0)
   homebrew (= 1.5.1)
@@ -236,13 +257,14 @@ DEPENDENCIES
   nginx (= 1.4.2)
   nodejs (= 3.3.0)
   onyx (>= 0)
-  openssl (>= 0)
   openssl (= 1.0.0)
+  openssl (>= 0)
   osx (>= 0)
   osxfuse (>= 0)
   phantomjs (= 2.0.2)
   pkgconfig (= 1.0.0)
   pow (>= 0)
+  property_list_key (= 0.1.0)
   redis (>= 0)
   repository (= 2.2.0)
   ruby (= 6.7.2)
@@ -251,6 +273,8 @@ DEPENDENCIES
   stdlib (= 4.1.0)
   sublime_text_2 (>= 0)
   sudo (= 1.0.0)
+  sysctl (>= 0)
   textmate (>= 0)
+  wget (>= 0)
   xquartz (= 1.1.0)
 

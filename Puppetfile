@@ -63,6 +63,7 @@ github "chrome"
 github "dropbox"
 github "firefox"
 github "gimp"
+github "gitx"
 github "handbrake"
 github "iterm2"
 github "onyx"
@@ -82,10 +83,13 @@ github "imagemagick"
 github "licecap"        # animated screen caps
 github "moreutils"
 github "pow"
+github "property_list_key", "0.1.0", :repo => "glarizza/puppet-property_list_key"
 github "openssl"
 github "osxfuse"
 github "osx"
 github "screen"
+github "sysctl"
+github "wget"
 
 
 

@@ -62,38 +62,26 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
+  # node versions
+  include nodejs::v0_4
+  include nodejs::v0_6
+  include nodejs::v0_8
+  include nodejs::v0_10
+
+  # default node version
+  class { 'nodejs::global':
+    version => 'v0.10'
+  }
+
   # default ruby versions
+  include ruby::1_8_7
+  include ruby::1_9_2
   include ruby::1_9_3
   include ruby::2_0_0
 
-  include go
-
-  # Apps
-  include charles   # TODO: issues installing....
-  include chrome
-  include dropbox
-  include firefox
-  include gimp
-  include iterm2::stable
-  include onyx
-  include mou
-  include mou::themes
-  include mysql
-  include redis
-
-  # Utils
-  include foreman
-  include freetds
-  include gcc
-  include gh
-  include homebrew
-  include imagemagick
-  include licecap
-  include moreutils
-  include phantomjs
-  include pow
-  include openssl
-  include screen
+  class { 'ruby::global':
+    version => '2.0.0'
+  }
 
   # common, useful packages
   package {
@@ -107,47 +95,5 @@ node default {
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
-  }
-
-  class { 'ruby::global':
-    version => '2.0.0'
-  }
-
-  go::version { '1.1.2': }
-  phantomjs::version { '1.9.2': }
-
-  ruby::gem { "bundler for 2.0.0":
-    gem     => 'bundler',
-    ruby    => '2.0.0'
-  }
-
-  ruby::gem { "dotenv for 2.0.0":
-    gem     => 'dotenv',
-    ruby    => '2.0.0'
-  }
-
-  ruby::gem { "bundler for 1.9.3":
-    gem     => 'bundler',
-    ruby    => '1.9.3'
-  }
-
-  ruby::gem { "dotenv for 1.9.3":
-    gem     => 'dotenv',
-    ruby    => '1.9.3'
-  }
-
-  ruby::plugin { 'rbenv-vars':
-    ensure => 'v1.2.0',
-    source  => 'sstephenson/rbenv-vars'
-  }
-
-  ruby::plugin { 'rbenv-gemset':
-    ensure => 'v0.4.1',
-    source  => 'jf/rbenv-gemset'
-  }
-
-  ruby::plugin { 'rbenv-use':
-    ensure => 'master',
-    source  => 'rkh/rbenv-use'
   }
 }

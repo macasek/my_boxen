@@ -1,4 +1,6 @@
 class people::macasek {
+  include baseline::environment
+
   $home     = "/Users/${::boxen_user}"
 
   # TODO: should do a pull if exists...
@@ -35,47 +37,11 @@ class people::macasek {
   # Apps
   include adium
   include handbrake
-  include sublime_text_2
-  include slate
-  include textmate::textmate2::nightly
 
   # Utils
   include osxfuse
 
-  file { "${boxen::config::bindir}/lime":
-    ensure  => link,
-    target  => '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl',
-    mode    => '0755',
-    require => Package['SublimeText2'],
-  }
-
-  file { '/Users/michael/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap':
-    source  => "${boxen::config::repodir}/templates/sublime/Default (OSX).sublime-keymap",
-    mode    => '0644',
-    require => Package['SublimeText2'],
-  }
-
-  file { '/Users/michael/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings':
-    source  => "${boxen::config::repodir}/templates/sublime/Preferences.sublime-settings",
-    mode    => '0644',
-    require => Package['SublimeText2'],
-  }
-
-  # TODO add sublime packages...
-  # sublime_text_2::package { 'Emmet':
-  #   source => 'sergeche/emmet-sublime'
-  # }
-
-  include osx::global::expand_print_dialog
-  include osx::global::expand_save_dialog
-
-  include osx::dock::clear_dock
   include osx::dock::dim_hidden_apps
-
-  include osx::finder::unhide_library
-
-  include osx::disable_app_quarantine
-  include osx::no_network_dsstores
 
   include osx::global::natural_mouse_scrolling
 
