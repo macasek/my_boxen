@@ -45,10 +45,24 @@ How do you do it?
 
 ### Setup
 
+Make sure you hostname is properly set (assuming your config uses it)
+
+```
+scutil --get LocalHostName
+scutil --get ComputerName
+scutil --get HostName
+
+scutil --set LocalHostName <hostname>
+scutil --set ComputerName <hostname>
+scutil --set HostName <hostname>
+```
+
+Pull down the boxen repo
+
 ```
 sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
-git clone <macasek/my_boxen> /opt/boxen/repo
+git clone git@github.com:macasek/my_boxen.git /opt/boxen/repo
 cd /opt/boxen/repo
 script/boxen
 ```
@@ -75,3 +89,13 @@ Once your shell is ready, open a new tab/window in your Terminal
 and you should be able to successfully run `boxen --env`.
 If that runs cleanly, you're in good shape.
 
+### TODO
+
+This section contains setup that needs to be added. For now it must be done manually.
+
+* Textmate
+  * Install bundle to auto save https://github.com/bomberstudios/Save-On-Focus-Lost.tmbundle
+  * setup striping of trailing whitespace on save
+    * Open the bundle editor (⌃⌥⌘B)
+    * “Text” → “Menu Actions” → “Converting / Stripping” → “Remove Trailing Spaces in Document / Selection”
+    * Then in the drawer put callback.document.export in Semantic Class and Document / Replace Document as Input / Output.
