@@ -99,3 +99,34 @@ This section contains setup that needs to be added. For now it must be done manu
     * Open the bundle editor (⌃⌥⌘B)
     * “Text” → “Menu Actions” → “Converting / Stripping” → “Remove Trailing Spaces in Document / Selection”
     * Then in the drawer put callback.document.export in Semantic Class and Document / Replace Document as Input / Output.
+* background
+* screensaver
+* dock
+  * minimize windows into dock
+* energy saver
+* mouse
+  * tracking speed
+* track pad
+  * tap to click
+* user
+  * add apple id
+  * login - require username
+	 * guest - disable
+  * master password
+* store
+	 * auto download apps purchased on there computers
+	 * install updates
+* keychain
+	 * show on menu
+* add to dock
+	 * apps
+	 * docs
+	 * change to show folder icon
+* enable root user
+* mission control
+  * do not auto rearrange spaces
+  * disable displays have separate spaces
+* messages
+  * set conn to be foe gmail
+  * set to open on startup
+* parallels
