@@ -130,3 +130,4 @@ This section contains setup that needs to be added. For now it must be done manu
   * set conn to be foe gmail
   * set to open on startup
 * parallels
+* microsoft office
