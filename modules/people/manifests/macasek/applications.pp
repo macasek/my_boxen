@@ -4,7 +4,7 @@ class people::macasek::applications {
   include handbrake
 
   # Utils
-  include osxfuse
+  # include osxfuse
 
   include osx::dock::dim_hidden_apps
 
