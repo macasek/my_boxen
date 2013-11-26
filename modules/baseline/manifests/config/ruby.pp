@@ -33,4 +33,14 @@ class config::ruby {
     ensure => 'master',
     source  => 'rkh/rbenv-use'
   }
+
+  ruby::plugin { 'rbenv-update':
+    ensure => 'master',
+    source  => 'rkh/rbenv-update'
+  }
+
+  ruby::plugin { 'rbenv-aliases':
+    ensure => 'master',
+    source  => 'tpope/rbenv-aliases'
+  }
 }

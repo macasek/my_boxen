@@ -29,10 +29,10 @@ class baseline::config {
     owner => "root"
   }
 
-  property_list_key { 'Show GitX where git lives':
-    ensure => present,
-    path   => "/Users/${::boxen_user}/Library/Preferences/nl.frim.GitX.plist",
-    key    => 'gitExecutable',
-    value  => '/opt/boxen/homebrew/bin/git',
-  }
+  # property_list_key { 'Show GitX where git lives':
+  #   ensure => present,
+  #   path   => "/Users/${::boxen_user}/Library/Preferences/nl.frim.GitX.plist",
+  #   key    => 'gitExecutable',
+  #   value  => '/opt/boxen/homebrew/bin/git',
+  # }
 }
