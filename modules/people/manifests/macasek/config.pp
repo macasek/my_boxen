@@ -17,12 +17,26 @@ class people::macasek::config {
         mode    => '0755',
         require => Package['Dropbox'],
       }
+
+      file { "${boxen::config::srcdir}/dotfiles":
+        ensure  => link,
+        target  => "${home}/Dropbox/src/dotfiles",
+        mode    => '0755',
+        require => Package['Dropbox'],
+      }
     }
 
     'dayman': {
       file { "${boxen::config::srcdir}/dropbox":
         ensure  => link,
         target  => "/Volumes/Macintosh HD 2/Dropbox/src",
+        mode    => '0755',
+        require => Package['Dropbox'],
+      }
+
+      file { "${boxen::config::srcdir}/dotfiles":
+        ensure  => link,
+        target  => "/Volumes/Macintosh HD 2/Dropbox/src/dotfiles",
         mode    => '0755',
         require => Package['Dropbox'],
       }
